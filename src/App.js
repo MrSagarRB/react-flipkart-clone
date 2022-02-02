@@ -11,6 +11,7 @@ function App() {
      <Categories />
      <Slider />
      <DealsOfTheDay />
+     
 
     </div>
   );

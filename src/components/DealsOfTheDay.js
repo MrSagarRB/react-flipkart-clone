@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import ProductData from "../dealOfDpro";
+
+const products= ProductData;
 
 function DealsOfTheDay() {
   const calculateTimeLeft = () => {
@@ -42,12 +45,9 @@ function DealsOfTheDay() {
     );
   });
 
-  console.log();
-
   return (
     <div className="container">
       <div className="flex justify-between  bg-white p-4">
-
         <div className="flex items-center space-x-5 ">
           <h1 className="text-xl"> Deals Of The Day</h1>
           <span className="flex justify-center items-center">
@@ -62,7 +62,35 @@ function DealsOfTheDay() {
         <button className="bg-blue-600 text-white px-7"> View All</button>
       </div>
 
-      <div> </div>
+      <div className="product bg-white mt-1 flex flex-row">
+
+{ 
+         products.map((items)=>{
+           return(  <div className="product-wrap flex flex-col items-center  p-3" key={items.id}> 
+           <img
+             className="w-24 h-40 hover:w-[98px] hover:h-[165px]"
+             src={items.imgUrl}
+           />
+           <h1 className="text-sm">{items.title}</h1>
+           <p className="text-green-700">{items.dicount}</p>
+           <p className="text-gray-500 text-sm">{items.offer}</p>
+         </div>
+    
+
+                
+
+
+           )
+         })
+
+      
+   }
+
+
+
+
+      </div>
+
       <div> </div>
     </div>
   );

@@ -5,8 +5,8 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 function Header() {
   return (
-    <div>
-      <div className="heading-div bg-blue-600 sm:flex sm:justify-center sm:items-center p-4 opacity-90">
+    <div className="sticky">
+      <div className="heading-div bg-blue-600 sm:flex sm:justify-center sm:items-center p-4 opacity-90 ">
         <div className="logo pr-4">
           <img
             className="w-20"
