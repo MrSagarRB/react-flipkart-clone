@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 function Header() {
   return (
     <div>
-      <div className="heading-div bg-blue-600 flex justify-center items-center p-4 opacity-90">
+      <div className="heading-div bg-blue-600 sm:flex sm:justify-center sm:items-center p-4 opacity-90">
         <div className="logo pr-4">
           <img
             className="w-20"
@@ -18,8 +18,8 @@ function Header() {
           </p>
         </div>
 
-        <div className="flex flex-row justify-center items-center">
-          <div className="bg-white">
+        <div className="sm:flex sm:flex-row flex-col sm:justify-center sm:items-center">
+          <div className="bg-white flex flex-row items-center w-80 sm:w-full">
             <input
               type="text"
               class=" mr-7 w-72 px-2 py-2  outline-none"
@@ -27,20 +27,20 @@ function Header() {
             />
             <Search className="text-blue-500 mr-3 " />
           </div>
-          <button className="bg-white px-10 py-[5px] text-blue-500 font-semibold ml-5 ">
+          <button className="bg-white px-10  py-[5px] text-blue-500 font-semibold sm:ml-5 mt-4  sm:mt-0">
             Login
           </button>
         </div>
 
-        <div className="text-white ml-9 flex justify-center items-center text-xl">
-          <h1>More</h1>
-          <span className="rotate-90 hover:-rotate-90 ml-2 ">
+        <div className="text-white sm:ml-9 sm:flex sm:flex-row justify-center sm:items-center text-xl sm:p-0 pt-5">
+       <button>More </button>
+          <span className="rotate-90 hover:-rotate-90 ml-2 hidden sm:inline cursor-pointer">
             {" "}
             <ArrowForwardIosIcon />{" "}
           </span>
         </div>
 
-        <div className="text-white ml-7 mr-20 flex">
+        <div className="text-white sm:ml-7 sm:mr-20 flex sm:p-0 pt-5 cursor-pointer">
           <ShoppingCartIcon className="mr-2" />
           <h1 className="text-xl">Cart</h1>
         </div>
